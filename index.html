@@ -20,14 +20,13 @@
       justify-content: center;
       border: 2px solid #fff;
       background-color: transparent;
-      transition: background-color 0.3s ease-in-out; /* เพิ่ม transition เพื่อให้มีการเปลี่ยนสีอย่างสวยงาม */
+      transition: background-color 0.3s ease-in-out;
     }
 
     .container {
       color: #fff;
     }
 
-    /* สไตล์สำหรับแสดงผลเมื่อมีผู้ชนะ */
     .win-alert {
       position: absolute;
       left: 50%;
@@ -45,21 +44,39 @@
 
     @media (max-width: 576px) {
       .square {
-        width: 50px;
-        height: 50px;
-        font-size: 2rem;
-      }
-    }
+    width: 70px; /* ปรับความกว้างเพิ่มขึ้นเป็น 70px */
+    height: 70px; /* ปรับความสูงเพิ่มขึ้นเป็น 70px */
+    font-size: 2rem;
+  }
+  /* จัดการข้อความให้เป็นกลางสุดของหน้าจอ */
+  h1.text-center.mb-5 {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  /* จัดการตำแหน่งของตารางให้อยู่กลางจอ */
+  .col-6.offset-md-3 {
+    margin-top: 2rem;
+  }
+}
 
-    /* เพิ่มสไตล์ hover เพื่อเปลี่ยนสีพื้นหลังของช่องที่ยังไม่ถูกคลิกเมื่อนำเมาส์มา Hover */
     .square:not(:empty):hover {
-      cursor: not-allowed; /* กำหนด Cursor เมื่อ Hover บนช่องที่ถูกเลือกแล้ว */
+      cursor: not-allowed;
     }
 
-    /* เพิ่มสไตล์ hover เพื่อเปลี่ยนสีพื้นหลังของช่องที่ยังไม่ถูกคลิกเมื่อนำเมาส์มา Hover */
     .square:empty:hover {
       background-color: #1a1a1a;
-      cursor: pointer; /* กำหนด Cursor เมื่อ Hover บนช่องที่ยังไม่ถูกเลือก */
+      cursor: pointer;
+    }
+    
+    /* ย้ายข้อความและตารางไปกลางหน้าจอ */
+    h1.text-center.mb-5 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .row.justify-content-center {
+      display: flex;
+      justify-content: center;
     }
   </style>
 </head>
@@ -67,6 +84,7 @@
 <body class="d-flex justify-content-center align-items-center vh-100">
 
   <div class="container">
+    <!-- ย้ายข้อความมาตรงกลางหน้าจอ -->
     <h1 class="text-center mb-5">X OHHHHHHHH</h1>
     <div class="row justify-content-center">
       <div class="col-6 offset-md-3">
